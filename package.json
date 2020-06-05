@@ -1,12 +1,40 @@
 {
-  "name": "vtouch-map",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@vtouch/vtouch-map",
+  "version": "1.0.3",
+  "description": "map\u001b[D\u001b[D\u001b[D\u001b[D \u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": { 
+  },
   "scripts": {
+    "build": "tsc -p . ",
+    "copy": "xcopy .\\lib ..\\wisdom-campus\\node_modules\\@vtouch\\vtouch-map\\lib /s /e /i /Y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "peerDependencies": {},
+  "dependencies": {
+    "cesium": "^1.69.0",
+    "fetch-jsonp": "^1.1.3",
+    "react": "^16.13.1",
+    "react-cli": "^0.3.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/cesium": "^1.67.5",
+    "clean-webpack-plugin": "^3.0.0",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.1.10:4873/vtouch/vtouch-map.git"
+  },
+  "keywords": [
+    "cesium",
+    "map",
+    "baidu",
+    "map"
+  ],
   "author": "bobby",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "ISC"
 }
