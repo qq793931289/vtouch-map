@@ -7,7 +7,7 @@ import { Sprite } from './sprite';
 import { viewerObject } from './viewer/viewobject';
 // require('cesium/Widgets/widgets.css');
 
-Cesium.buildModuleUrl.setBaseUrl(mapConfig.sourceIP + mapConfig.buildModuleUrl);
+// Cesium.buildModuleUrl.setBaseUrl(mapConfig.sourceIP + mapConfig.buildModuleUrl);
 export class Map {
 
     public viewer = new Cesium.Viewer(mapConfig.domElementId, {

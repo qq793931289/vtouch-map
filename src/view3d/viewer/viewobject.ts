@@ -37,7 +37,7 @@ export class viewerObject {
     this.viewer.scene.screenSpaceCameraController.enableTranslate = true;
     this.viewer.scene.screenSpaceCameraController.enableZoom = true;
 
-    this.viewer.scene.fxaa = false;
+    // this.viewer.scene.fxaa = false;
 
     this.viewer.scene.globe.maximumScreenSpaceError = 4 / 3;
 
@@ -77,9 +77,10 @@ export class viewerObject {
   public addTileMapServiceImageryProvider(url: string, format: string = 'jpg') {
     const layer = this.viewer.scene.imageryLayers.addImageryProvider(
       new Cesium.TileMapServiceImageryProvider({
+        // ImageryProvider: false,
         url: url,
         fileExtension: format,
-      })
+      }) as any
     );
 
     layer.brightness = 1.40;
