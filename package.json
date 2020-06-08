@@ -1,13 +1,13 @@
 {
   "name": "vtouch-map",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "map\u001b[D\u001b[D\u001b[D\u001b[D \u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {},
   "scripts": {
     "build": "tsc -p . ",
-    "copy": "xcopy .\\lib ..\\wisdom-campus\\node_modules\\@vtouch\\vtouch-map\\lib /s /e /i /Y",
+    "copy": "xcopy .\\lib ..\\center-control\\node_modules\\vtouch-map\\lib /s /e /i /Y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {},
