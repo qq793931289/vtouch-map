@@ -2,6 +2,7 @@ import * as Cesium from 'cesium';
 import { viewerObject } from './view3d/viewer/viewobject';
 import { cameraController } from './view3d/camera';
 import { IFirePointOption, Rectangle } from '.';
+import 'cesium/Source/Widgets/widgets.css';
 export declare class AppBase {
     viewer: Cesium.Viewer;
     viewerObject: viewerObject;

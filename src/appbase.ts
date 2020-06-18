@@ -4,7 +4,8 @@ import { viewerObject } from './view3d/viewer/viewobject';
 import { cameraController } from './view3d/camera';
 import { mapConfig, IFirePointOption, Rectangle } from '.';
 import { Sprite } from './view3d/sprite';
-
+import 'cesium/Source/Widgets/widgets.css';
+(Cesium as any).buildModuleUrl.setBaseUrl(mapConfig.sourceIP + mapConfig.buildModuleUrl);
 export class AppBase {
 
   // public static thisApp: AppBase;
@@ -16,8 +17,14 @@ export class AppBase {
   // }
 
   // public viewer = new Viewer() as Cesium.Viewer;
+  // const url = "http://mt1.google.cn/vt/lyrs=s&hl=zh-CN&x={x}&y={y}&z={z}&s=Gali";
+  // const imageryProvider = new Cesium.UrlTemplateImageryProvider({ url: url });
   public viewer = new Cesium.Viewer(mapConfig.domElementId, {
     imageryProvider: undefined,
+    // imageryProvider: new Cesium.UrlTemplateImageryProvider({ url: 'http://mt1.google.cn/vt/lyrs=s&hl=zh-CN&x={x}&y={y}&z={z}&s=Gali' }) as any,
+    // imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+    //   url: 'https://a.tile.openstreetmap.org/'
+    // }) as any,
     // imageryProvider: this._googleMap(),
     // terrainProvider: Cesium.createWorldTerrain(),
     // imageryProvider: new Cesium.TileMapServiceImageryProvider({
@@ -50,7 +57,7 @@ export class AppBase {
   public endLatitude: number = mapConfig.defaultLocation.endLatitude;
 
   constructor() {
-
+    console.log('AppBase');
     this.viewerObject = new viewerObject(this.viewer);
 
     this.cameraController = new cameraController(this.viewer);

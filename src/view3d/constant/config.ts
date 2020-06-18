@@ -10,10 +10,11 @@ export const mapConfig = {
   },
   map: {},
 
-  sourceIP: 'http://192.168.1.133:85',
+  // sourceIP: 'http://192.168.1.133:85',
+  sourceIP: '',
 
-  // buildModuleUrl: 'https://cesium.com/downloads/cesiumjs/releases/1.68/Build/Cesium/Source',
-  buildModuleUrl: '/map/cesium/Source',
+  buildModuleUrl: 'https://cesium.com/downloads/cesiumjs/releases/1.70.1/Build/Cesium/Source',
+  // buildModuleUrl: '/map/cesium/Source',
 
   fireHeight: 888,
   horizon: 1,

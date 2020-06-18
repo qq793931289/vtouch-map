@@ -1,30 +1,30 @@
-import { mapConfig, Map } from '.';
+// import { mapConfig, Map } from '.';
 
 
-export class mapPlugin {
+// export class mapPlugin {
 
-    public map: Map;
-    // public viewer: Cesium.Viewer;
-    // public handler: Cesium.ScreenSpaceEventHandler;
+//     public map: Map;
+//     // public viewer: Cesium.Viewer;
+//     // public handler: Cesium.ScreenSpaceEventHandler;
 
-    constructor() {
+//     constructor() {
 
-        this.map = new Map();
+//         this.map = new Map();
 
-        mapConfig.map = this.map;
-        this.map.onStartUp();
+//         mapConfig.map = this.map;
+//         this.map.onStartUp();
 
-        // this.viewer = this.map.viewer;
-        // this.handler = this.map.handler;
+//         // this.viewer = this.map.viewer;
+//         // this.handler = this.map.handler;
 
-        // const map = new Map();
-        // if (!(mapConfig.map instanceof Map)) {
-        //     mapConfig.map = map;
-        // }
+//         // const map = new Map();
+//         // if (!(mapConfig.map instanceof Map)) {
+//         //     mapConfig.map = map;
+//         // }
 
-        // map.onStartUp();
+//         // map.onStartUp();
 
-    }
+//     }
 
 
-}
+// }

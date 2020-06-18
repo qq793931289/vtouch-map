@@ -5,5 +5,5 @@ export * from './constant/config';
 export * from './interface';
 export * from './sprite';
 // export * from './viewer';
-export * from './map';
-export * from './plugin';
+// export * from './map';
+// export * from './plugin';

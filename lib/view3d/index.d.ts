@@ -4,5 +4,3 @@ export * from './cartesian';
 export * from './constant/config';
 export * from './interface';
 export * from './sprite';
-export * from './map';
-export * from './plugin';
