@@ -1,1 +1,0 @@
-export { mapConfig } from './config';
