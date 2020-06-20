@@ -20,7 +20,7 @@ export class AppBase {
   // const url = "http://mt1.google.cn/vt/lyrs=s&hl=zh-CN&x={x}&y={y}&z={z}&s=Gali";
   // const imageryProvider = new Cesium.UrlTemplateImageryProvider({ url: url });
   public viewer = new Cesium.Viewer(mapConfig.domElementId, {
-    imageryProvider: undefined,
+    imageryProvider: false as any,
     // imageryProvider: new Cesium.UrlTemplateImageryProvider({ url: 'http://mt1.google.cn/vt/lyrs=s&hl=zh-CN&x={x}&y={y}&z={z}&s=Gali' }) as any,
     // imageryProvider: new Cesium.OpenStreetMapImageryProvider({
     //   url: 'https://a.tile.openstreetmap.org/'
