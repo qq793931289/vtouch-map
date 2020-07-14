@@ -11,7 +11,7 @@ export class API {
   }
 
   public static async fetchBaiduMap(address: string): Promise<any> {
-    const baseUrl = 'http://api.map.baidu.com/place/v2/search?';
+    const baseUrl = 'https://api.map.baidu.com/place/v2/search?';
     const ak = 'cA1QlZ6PTePnOYyjDcBpjoA4nIL3Ejde';
     // const ak = 'BryvKfs3TG3GZoPXA7jmNZ4kd4tOPdRQ';
     // const address = 'http://api.map.baidu.com/place/v2/search?query=ATM机&tag=银行&region=北京&output=json&ak=cA1QlZ6PTePnOYyjDcBpjoA4nIL3Ejde';
@@ -34,9 +34,9 @@ export class API {
       // mode: 'no-cors',
       // credentials: 'include', // 解决跨域问题
       // headers: {
-      //     // 'Accept': 'application/json, text/plain, */*',
-      //     'Content-Type': 'application/json; charset=utf-8',
-      //     // 'Cache-Control': ' no-cache',
+      //   'Accept': 'application/json, text/plain, */*',
+      //   'Content-Type': 'application/json; charset=utf-8',
+      //   'Cache-Control': ' no-cache',
       // },
       // jsonCallbackFunction: 'showLocation',
 
