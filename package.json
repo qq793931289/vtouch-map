@@ -1,6 +1,6 @@
 {
   "name": "vtouch-map",
-  "version": "1.0.14",
+  "version": "1.0.16",
   "description": "map\u001b[D\u001b[D\u001b[D\u001b[D \u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://192.168.1.10:4873/vtouch/vtouch-map.git"
+    "url": "git@github.com:qq793931289/vtouch-map.git"
   },
   "keywords": [
     "cesium",

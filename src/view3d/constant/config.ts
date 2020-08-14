@@ -9,23 +9,15 @@ export const mapConfig = {
     endLatitude: 23.063395,
   },
   map: {},
-
-  // sourceIP: 'http://192.168.1.133:85',
   sourceIP: '',
-
   buildModuleUrl: 'https://cesium.com/downloads/cesiumjs/releases/1.70.1/Build/Cesium/Source',
-  // buildModuleUrl: '/map/cesium/Source',
-
   fireHeight: 888,
   horizon: 1,
-
   debug: false,
-
   variable: {
     zone: [],
   },
   version: '1.0',
-
   showMap: true,
 
 }; 

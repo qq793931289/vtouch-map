@@ -1,5 +1,4 @@
 import * as Cesium from 'cesium';
-// import { Viewer } from './view3d/viewer';
 import { viewerObject } from './view3d/viewer/viewobject';
 import { cameraController } from './view3d/camera';
 import { mapConfig, IFirePointOption, Rectangle } from '.';
@@ -7,29 +6,8 @@ import { Sprite } from './view3d/sprite';
 import 'cesium/Source/Widgets/widgets.css';
 (Cesium as any).buildModuleUrl.setBaseUrl(mapConfig.sourceIP + mapConfig.buildModuleUrl);
 export class AppBase {
-
-  // public static thisApp: AppBase;
-  // public viewer:;
-
-  // constructor() {
-  //     AppBase.thisApp = this;
-
-  // }
-
-  // public viewer = new Viewer() as Cesium.Viewer;
-  // const url = "http://mt1.google.cn/vt/lyrs=s&hl=zh-CN&x={x}&y={y}&z={z}&s=Gali";
-  // const imageryProvider = new Cesium.UrlTemplateImageryProvider({ url: url });
   public viewer = new Cesium.Viewer(mapConfig.domElementId, {
     imageryProvider: false as any,
-    // imageryProvider: new Cesium.UrlTemplateImageryProvider({ url: 'http://mt1.google.cn/vt/lyrs=s&hl=zh-CN&x={x}&y={y}&z={z}&s=Gali' }) as any,
-    // imageryProvider: new Cesium.OpenStreetMapImageryProvider({
-    //   url: 'https://a.tile.openstreetmap.org/'
-    // }) as any,
-    // imageryProvider: this._googleMap(),
-    // terrainProvider: Cesium.createWorldTerrain(),
-    // imageryProvider: new Cesium.TileMapServiceImageryProvider({
-    //   url: Cesium.buildModuleUrl("Assets/Textures/NaturalEarthII"),
-    // }),
     selectionIndicator: false,
     animation: false,
     timeline: false,
@@ -43,8 +21,6 @@ export class AppBase {
     scene3DOnly: true,
     requestRenderMode: true,
     maximumRenderTimeChange: Infinity,
-    // useDefaultRenderLoop: false,
-    // targetFrameRate: 12,
   });;
 
   public viewerObject: viewerObject;
@@ -67,7 +43,6 @@ export class AppBase {
   }
 
   public onStartUp() {
-    console.log('AppBase');
   }
 
   public createViewer() {

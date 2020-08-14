@@ -3,12 +3,10 @@ import { Cartesian3, Rectangle, mapConfig, Cartesian } from '..';
 
 export class Camera {
 
-    // private _viewer: Cesium.Viewer;
     private _camera: Cesium.Camera;
 
     constructor(viewer: Cesium.Viewer) {
 
-        // this._viewer = viewer;
         this._camera = viewer.camera;
 
         return this;
@@ -33,7 +31,6 @@ export class Camera {
     }
 
     public cameraRectangleUpdate(option: Rectangle) {
-        // -0.01185，-0.00328
         const { longitude: beginLongitude, latitude: beginLatitude } = Cartesian.offset2(option.beginLongitude, option.beginLatitude);
         const { longitude: endLongitude, latitude: endLatitude } = Cartesian.offset2(option.endLongitude, option.endLatitude);
         console.log(
@@ -42,12 +39,8 @@ export class Camera {
         );
         this._camera.flyTo({
             destination: Cesium.Rectangle.fromDegrees(
-                // 113.392367, 23.062804, 113.393429, 23.062706,
                 beginLongitude, beginLatitude,
                 endLongitude, endLatitude,
-                // beginLongitude, beginLatitude,
-
-
             )
         });
     };
