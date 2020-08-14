@@ -2,8 +2,8 @@ const path = require('path')
 const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 //用于在构建前清除dist目录中的内容
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 //清除dist构建目录文件
 // plugins.push(new CleanWebpackPlugin(['dist']));
 
@@ -18,31 +18,32 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './lib'),
     filename: '[name].js',
+    // filename: 'bundle.js',
     libraryTarget: 'umd',
     library: 'vtouch-view3d',
     umdNamedDefine: true
   },
   module: {
     rules: [{
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        query: {
-          'declaration': true
-        },
-        exclude: /node_modules/,
+      test: /\.tsx?$/,
+      loader: 'awesome-typescript-loader',
+      query: {
+        declaration: true
       },
-      {
-        test: /\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
-      },
-      {
-        test: /\.(woff|woff2|ttf|eot|svg)$/,
-        loader: 'file-loader?name=fonts/[name].[hash:8].[ext]'
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif)$/,
-        loader: 'url-loader?limit=8192&name=images/[name].[hash:8].[ext]'
-      }
+      exclude: /node_modules/,
+    },
+    {
+      test: /\.scss$/,
+      loader: 'style-loader!css-loader!sass-loader'
+    },
+    {
+      test: /\.(woff|woff2|ttf|eot|svg)$/,
+      loader: 'file-loader?name=fonts/[name].[hash:8].[ext]'
+    },
+    {
+      test: /\.(png|jpg|jpeg|gif)$/,
+      loader: 'url-loader?limit=8192&name=images/[name].[hash:8].[ext]'
+    }
     ]
   },
   performance: {
@@ -51,7 +52,7 @@ module.exports = {
   externals: [nodeExternals()],
   devtool: '#source-map',
   plugins: [
-    new CleanWebpackPlugin(['lib'])
+    // new CleanWebpackPlugin(['lib'])
   ],
 }
 
@@ -65,9 +66,12 @@ if (process.env.NODE_ENV === 'production') {
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
+      uglifyOptions: {
+        sourceMap: true,
+        compress: {
+          warnings: false,
+          drop_console: true
+        }
       }
     }),
     new webpack.LoaderOptionsPlugin({

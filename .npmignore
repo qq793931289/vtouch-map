@@ -9,6 +9,7 @@ tslint.json
 tsconfig.json
 note.md
 *.log
+src
 
 /lib
 package-lock.json
