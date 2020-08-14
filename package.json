@@ -1,12 +1,11 @@
 {
   "name": "vtouch-map",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "description": "map\u001b[D\u001b[D\u001b[D\u001b[D \u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "publishConfig": {},
   "scripts": {
-    "publish": " npm publish  ",
     "build": "tsc -p . ",
     "prebuild": "shx rm -rf lib  ",
     "bbuild": "tsc -p . & cpx \"src/res/**/*\" \"lib/res\"",

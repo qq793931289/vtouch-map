@@ -10,6 +10,7 @@ tsconfig.json
 note.md
 *.log
 src
+/node_modules/
 
 /lib
 package-lock.json
