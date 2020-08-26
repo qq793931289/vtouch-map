@@ -7,7 +7,6 @@ import 'cesium/Source/Widgets/widgets.css';
 (Cesium as any).buildModuleUrl.setBaseUrl(mapConfig.sourceIP + mapConfig.buildModuleUrl);
 export class AppBase {
   public viewer = new Cesium.Viewer(mapConfig.domElementId, {
-    imageryProvider: false as any,
     selectionIndicator: false,
     animation: false,
     timeline: false,

@@ -1,6 +1,6 @@
 {
   "name": "vtouch-map",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "map\u001b[D\u001b[D\u001b[D\u001b[D \u001b[C\u001b[C\u001b[C\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,8 +36,8 @@
     "webpack-node-externals": "^2.5.1"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:qq793931289/vtouch-map.git"
+    "type": " ",
+    "url": " "
   },
   "keywords": [
     "cesium",
