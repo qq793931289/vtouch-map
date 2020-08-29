@@ -36,6 +36,8 @@ export class viewerObject {
 
     this.viewer.scene.globe.maximumScreenSpaceError = 4 / 3;
 
+    this.viewer.scene.globe.baseColor = Cesium.Color.BLACK;
+
     this.viewer.scene.sun = new Cesium.Sun();
     this.viewer.scene.sun.show = false;
 

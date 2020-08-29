@@ -32,7 +32,6 @@ export class AppBase {
   public endLatitude: number = mapConfig.defaultLocation.endLatitude;
 
   constructor() {
-    console.log('AppBase');
     this.viewerObject = new viewerObject(this.viewer);
 
     this.cameraController = new cameraController(this.viewer);
