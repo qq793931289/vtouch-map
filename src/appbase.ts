@@ -5,6 +5,7 @@ import { mapConfig, IFirePointOption, Rectangle } from '.';
 import { Sprite } from './view3d/sprite';
 import 'cesium/Source/Widgets/widgets.css';
 (Cesium as any).buildModuleUrl.setBaseUrl(mapConfig.sourceIP + mapConfig.buildModuleUrl);
+Cesium.Ion.defaultAccessToken = mapConfig.accessToken;
 export class AppBase {
   public viewer = new Cesium.Viewer(mapConfig.domElementId, {
     selectionIndicator: false,
