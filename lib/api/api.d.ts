@@ -1,3 +1,4 @@
 export declare class API {
-    static fetchBaiduMap(address: string, ak?: string): Promise<any>;
+    static getPoint(address: string, ak?: string): Promise<any>;
+    static getAddress(long?: number, lat?: number, ak?: string): Promise<any>;
 }

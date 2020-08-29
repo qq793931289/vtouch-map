@@ -50,7 +50,8 @@ module.exports = {
     hints: false
   },
   externals: [nodeExternals()],
-  devtool: '#source-map',
+  // devtool: '#source-map',
+  devtool: false,
   plugins: [
     // new CleanWebpackPlugin(['lib'])
   ],

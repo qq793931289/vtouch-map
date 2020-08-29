@@ -16,3 +16,5 @@ src
 package-lock.json
 webpack.config.js
 build/
+
+*.js.map
